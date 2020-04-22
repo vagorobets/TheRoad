@@ -15,7 +15,7 @@ html {
 }
 
 :root {
-   --primary-color: #2b81e4;
+   --primary-color: #559ef1;
    --secondary-color: #eee;
    --white-color: #fff;
    --grey-color: #555;
@@ -29,9 +29,6 @@ html {
 }
 
 .container{
-    background-color: var(--secondary-color);
-    margin: 3.5rem;
-    box-shadow: 0 1rem 3rem var(--grey-color);
     overflow: hidden;
 }
 
@@ -173,13 +170,13 @@ html {
 /* Popular tours */
 
 .popular-tours {
-    padding: 5rem 0 10rem 0;
+    padding: 10rem 0 15rem 0;
 }
 
 .popular-tours-heading {
     font-size: 8rem;
     text-align: center;
-    margin-bottom: 8rem;
+    margin-bottom: 10rem;
     color: var(--primary-color);
 }
 
@@ -222,7 +219,7 @@ html {
     text-transform: uppercase;
     position: absolute;
     top: 30%;
-    right: 1.5rem;
+    right: 2.5rem;
     color: var(--white-color);
     text-shadow: 0 0 1rem #000;
 }
@@ -234,7 +231,7 @@ html {
 }
 
 .card-list-item {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 500;
     color: var(--light-grey-color);
     margin: 2rem 0;
@@ -364,4 +361,98 @@ html {
 
 .story-paragraph::first-letter {
     margin-left: 1rem;
+}
+
+/* Contacts */
+
+.contact {
+    padding: 10rem 0 10rem 0;
+    text-align: center;
+
+}
+
+.contact-heading {
+    font-size: 7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    color: var(--primary-color);
+}
+
+.contact-form {
+    width: 70rem;
+    height: 50rem;
+    margin: auto;
+    flex-direction: column;
+    padding: 5rem;
+}
+
+.input-group{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    position: relative;
+}
+
+.input-groups {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-groups .input-group {
+    width: 48.5%;
+}
+
+.input-group input,
+.input-group textarea {
+    padding: 3rem 1rem 1rem;
+    background-color: var(--secondary-color);
+    border: .1rem solid var(--secondary-color);
+    font-size: 1.4rem;
+    color: var(--light-grey-color);
+    letter-spacing: .1rem;
+    border-radius: .5rem;
+    transition: border .3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border: .1rem solid #ccc;
+}
+
+.input-group label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: var(--grey-color);
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.form-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    letter-spacing: .1rem;
+    margin-top: 1rem;
+    background-color: var(--light-grey-color);
+    color: var(--white-color);
+    border-radius: .5rem;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color .4s;
+}
+
+.form-btn:hover {
+    background-color: var(--grey-color);
+}
+
+.input-group textarea {
+    max-height: 15rem;
+    max-width: 100%;
 }
