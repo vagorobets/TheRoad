@@ -123,7 +123,7 @@ html {
     }
 
     15% {
-        transform: translateY(-75%);
+        transform: translateY(-50%);
     }
 
     20% {
@@ -199,6 +199,7 @@ html {
 .front-side {
     text-align: center;
     background-color: var(--white-color);
+    border: .1rem solid var(--primary-color);
     border-radius: .3rem;
     position: relative;
     z-index: 10;
@@ -206,12 +207,6 @@ html {
     transition: opacity .4s, transform .4s, box-shadow .4s;
 }
 
-.change > .front-side {
-    transform: translateZ(-5rem) translateX(3rem);
-    box-shadow: 0 2rem 4rem #777;
-    opacity: 0.5;
-    z-index: 0;
-  }  
 
 .tour-name {
     font-size: 2.5rem;
@@ -233,30 +228,11 @@ html {
 .card-list-item {
     font-size: 1.5rem;
     font-weight: 500;
-    color: var(--light-grey-color);
+    color: var(--grey-color);
     margin: 2rem 0;
-    border-bottom: .1rem solid var(--primary-color);
+    text-transform: uppercase;
+    border-bottom: .1rem dashed var(--primary-color);
     padding-bottom: 1.5rem;
-}
-
-.back-side {
-    position: absolute;
-    top: 0;
-    background-color: var(--primary-color);
-    width: 100%;
-    height: 100%;
-    border-radius: .3rem;
-    box-shadow: 0 2rem 4rem #777;
-    flex-direction: column;
-    transform: translateZ(-5rem) translateX(3rem);
-    opacity: .5;
-    transition: opacity .4s, transform .4s, box-shadow .4s;
-}
-
-.change > .back-side {
-    transform: translateZ(0) translateX(0);
-    box-shadow: 0 .5rem 2rem #aaa;
-    opacity: .9;
 }
 
 .tour-price {
@@ -306,7 +282,6 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: .6;
 }
 
 .bg-video {
@@ -408,8 +383,7 @@ html {
 .input-group input,
 .input-group textarea {
     padding: 3rem 1rem 1rem;
-    background-color: var(--secondary-color);
-    border: .1rem solid var(--secondary-color);
+    border: .1rem solid var(--light-grey-color);
     font-size: 1.4rem;
     color: var(--light-grey-color);
     letter-spacing: .1rem;
@@ -439,7 +413,7 @@ html {
     font-size: 1.6rem;
     letter-spacing: .1rem;
     margin-top: 1rem;
-    background-color: var(--light-grey-color);
+    background-color: var(--primary-color);
     color: var(--white-color);
     border-radius: .5rem;
     border: none;
@@ -449,10 +423,39 @@ html {
 }
 
 .form-btn:hover {
-    background-color: var(--grey-color);
+    background-color: var(--light-grey-color);
 }
 
 .input-group textarea {
     max-height: 15rem;
     max-width: 100%;
+}
+
+/* Footer */
+
+.footer {
+    background-color: var(--light-grey-color);
+    padding: 4rem 0 2rem 0;
+}
+
+.footer-list {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-link {
+    font-size: 1.5rem;
+    color: var(--white-color);
+    margin: 0 2rem;
+    text-transform: uppercase;
+    padding: .5rem 3rem;
+    letter-spacing: .3rem;
+    background-color: var(--light-grey-color);
+    transition: all .3s;
+    border-radius: .5rem;
+}
+
+.footer-link:hover {
+    transform: translateY(-.3rem);
+    box-shadow: 0 2rem 3rem #000;
 }
