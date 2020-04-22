@@ -44,8 +44,8 @@ html {
   
   .open-navbar-icon {
     position: fixed;
-    top: 6.5rem;
-    left: 6.5rem;
+    top: 3.5rem;
+    left: 3.5rem;
     z-index: 200;
   }
   
@@ -374,20 +374,25 @@ html {
     cursor: pointer;
 }
 
-.navigation-button {
+.booking-button {
     position: absolute;
     top: .5rem;
     left: .5rem;
     padding: .5rem;
-    background-color: rgba(255, 255, 255, .8);
-    color: var(--light-grey-color);
-    border-radius: .3rem;
+    background-color: var(--primary-color);
+    color: var(--white-color);
     border: none;
+    border-radius: .5rem;
+    text-transform: uppercase;
+    transition: background-color .4s;
     font-size: 1.5rem;
     font-weight: 600;
-    text-transform: uppercase;
     letter-spacing: .2rem;
     cursor: pointer;
+}
+
+.booking-button:hover {
+    background-color: var(--light-grey-color);
 }
 
 /* Stories */
@@ -579,4 +584,134 @@ html {
 .footer-link:hover {
     transform: translateY(-.3rem);
     box-shadow: 0 2rem 3rem #000;
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+   .cards-wrapper {
+       flex-direction: column;
+       align-items: center;
+   }
+
+   .card {
+       margin: 2rem 0;
+   }
+
+   .story-bg{
+       width: 85%;
+   }
+}
+
+@media (max-width: 1000px){
+    .nav-list {
+        flex-direction: column;
+    }
+
+    .nav-link {
+        flex-grow: 1;
+    }
+
+    .header-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+    }
+
+    .heading {
+        font-size: 6rem;
+    }
+
+    .header-paragraph {
+        font-size: 2.5rem;
+    }
+
+    .popular-tours-heading {
+        font-size: 6rem;
+    }
+
+    .story-bg{
+        transform: skewX(0);
+    }
+
+    .story-heading {
+        text-align: center;
+    }
+
+    .story {
+        transform: skewX(0);
+        flex-direction: column;
+    }
+
+    .story-image{
+        margin-bottom: 3rem;
+    }
+
+    .footer-link{
+        padding: .3rem 2rem;
+        margin: 0 1rem;
+    }
+}
+
+@media (max-width: 800px){
+    .header-paragraph{
+        display: none;
+    }
+
+    .popular-tours-heading{
+        font-size: 5rem;
+    }
+
+    .contact-form{
+        width: 90%;
+    }
+
+    .footer-list{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-link{
+        margin: 1rem 0;
+    }
+}
+
+@media (max-width: 650px){
+    .open-navbar-icon {
+        top: 2.5rem;
+        left: 2.5rem;
+    }
+
+    .navbar-wrapper {
+        padding: 0;
+    }
+
+    .close-navbar-icon {
+        right: 4rem;
+    }
+
+    .header {
+        height: 100vh;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .contact-heading{
+        font-size: 6rem;
+    }
+
+    .contact-form{
+        padding: 2rem;
+        height: 40rem;
+    }
+}
+
+@media (max-width: 500px){
+    html {
+        font-size: 45%;
+    }
 }
